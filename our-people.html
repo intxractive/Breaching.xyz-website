@@ -11,7 +11,19 @@
             color: white;
             text-align: center;
             padding: 20px;
+            margin: 0; /* Added to remove default body margin */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure full viewport height */
         }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
         nav {
             display: flex;
             justify-content: center;
@@ -22,6 +34,7 @@
             margin: 20px auto;
             width: 80%;
         }
+
         nav a {
             color: white;
             text-decoration: none;
@@ -30,10 +43,12 @@
             border-radius: 5px;
             font-size: 18px;
         }
+
         nav a:hover {
             background: #555;
             transform: scale(1.1);
         }
+
         .section {
             background: rgba(0, 0, 0, 0.6);
             padding: 20px;
@@ -42,9 +57,17 @@
             width: 80%;
             margin: auto;
         }
+
+        .content {
+            flex: 1; /* Allow content to grow and fill available space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+        }
     </style>
 </head>
 <body>
+    <header>Breaching</header>
     <nav>
         <a href="index.html">Fedding</a>
         <a href="our-people.html">Our People</a>
@@ -52,9 +75,11 @@
         <a href="hall-of-autism.html">Hall Of Autism</a>
         <a href="discord.html">Join Our Discord</a>
     </nav>
-    <h1>Meet Our People</h1>
-    <div class="section">
-        <p>We are a team of passionate individuals dedicated to creating an innovative and engaging online experience. Learn more about our members and their contributions.</p>
+    <div class="content">
+        <h1>Meet Our People</h1>
+        <div class="section">
+            <p>We are a team of passionate individuals dedicated to creating an innovative and engaging online experience. Learn more about our members and their contributions.</p>
+        </div>
     </div>
 </body>
 </html>
