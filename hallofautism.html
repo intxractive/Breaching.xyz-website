@@ -42,4 +42,61 @@
             align-items: center;
             justify-content: center;
             background: rgba(255, 255, 255, 0.1);
-            padding:
+            padding: 10px 20px;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 1000px;
+            margin-top: 10px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0 15px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content {
+            margin-top: 20px;
+            padding: 20px;
+            max-width: 800px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <header>Breaching</header>
+    <div class="navbar">
+        <a href="index.html">Breaching</a>
+        <a href="our-people.html">Our People</a>
+        <a href="contact.html">Contact</a>
+        <a href="hallofautism.html">Hall Of Autism</a>
+        <a href="https://discord.gg/aZv7MWnNfM" class="discord-btn" target="_blank">Join Our Discord</a>
+    </div>
+    <div class="content">
+        <h1>Hall of Autism</h1>
+        <p>This is placeholder content for the Hall of Autism page. You can add your actual content here.</p>
+        <p>For example, you might want to include information about individuals who have made significant contributions to the community.</p>
+    </div>
+</body>
+</html>
