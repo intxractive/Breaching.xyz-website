@@ -2,107 +2,140 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our People - Breaching</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1a1a1a, #333);
-            color: white;
-            text-align: center;
-            padding: 20px;
+        * {
             margin: 0;
-            display: flex;
-            flex-direction: column;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            position: relative;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #000000, #444444);
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             min-height: 100vh;
-        }
-
-        header {
-            background: linear-gradient(
-                90deg, 
-                rgba(34, 34, 34, 0.9), 
-                rgba(51, 51, 51, 0.9)
-            ); /* Subtle gradient */
-            background-size: 100% 2px; /* Fine texture */
-            padding: 20px;
-            font-size: 28px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .profile-placeholder {
-            width: 60px;
-            height: 60px;
-            background-color: #555;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            background: rgba(50, 50, 50, 0.9);
-            padding: 15px;
-            border-radius: 10px;
-            margin: 20px auto;
-            width: 80%;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            transition: 0.3s;
-            border-radius: 5px;
-            font-size: 18px;
-        }
-
-        nav a:hover {
-            background: #555;
-            transform: scale(1.1);
-        }
-
-        .section {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            width: 80%;
-            margin: auto;
-        }
-
-        .content {
-            flex: 1;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+        }
+
+        /* Header styles */
+        header {
+            font-size: 32px;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ffffff, #cccccc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+            margin-top: 20px;
+        }
+
+        /* Navigation bar */
+        .navbar {
+            display: flex;
+            align-items: center;
             justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 1000px;
+            margin-top: 10px;
+        }
+
+        .navbar img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0 15px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+        }
+
+        /* Our People Section */
+        .our-people {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 40px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .person {
+            width: 30%;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .person img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .person h4 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .person p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="profile-placeholder">i5</div>
-        <span>Breaching</span>
-    </header>
-    <nav>
+    <header>Breaching</header>
+    <div class="navbar">
+        <img src="Resources/Fed.png" alt="Logo">
         <a href="index.html">Breaching</a>
-        <a href="our-people.html">Our People</a>
+        <a href="ourpeople.html">Our People</a>
         <a href="contact.html">Contact</a>
-        <a href="hall-of-autism.html">Hall Of Autism</a>
-        <a href="discord.html">Join Our Discord</a>
-    </nav>
-    <div class="content">
-        <h1>Meet Our People</h1>
-        <div class="section">
-            <p>We are a team of passionate individuals dedicated to creating an innovative and engaging online experience. Learn more about our members and their contributions.</p>
+        <a href="hallofautism.html">Hall Of Autism</a>
+        <a href="https://discord.gg/xCdyEGVRcj" class="discord-btn" target="_blank">Join Our Discord</a>
+    </div>
+    <div class="our-people">
+        <div class="person">
+            <img src="" alt="Person 2">
+            <h4>I5</h4>
+            <p>I5 is a talented game developer & boxer from Tampa, Florida. I5 is a billionare with a mansion and multiple Rolexes. He is also a doxxer, so don't mess with him.</p>
         </div>
     </div>
 </body>
