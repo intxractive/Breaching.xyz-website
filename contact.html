@@ -6,22 +6,83 @@
     <title>Contact Us</title>
     <style>
         body {
-            font-family: sans-serif;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a1a, #333);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav {
             display: flex;
             justify-content: center;
+            gap: 20px;
+            background: rgba(50, 50, 50, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: 0.3s;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            background: #555;
+            transform: scale(1.1);
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            flex: 1; /* Allow container to grow and fill available space */
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #1a1a1a, #333); /* Your Gradient */
-            color: #dcddde; /* Discord Text Color */
-            margin: 0;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .section {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            width: 100%;
         }
 
         .contact-form {
-            background-color: #202225; /* Discord Panel Background */
+            background-color: #202225;
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            width: 400px; /* Adjust width as needed */
+            width: 100%; /* Make it fill the .section */
+            box-sizing: border-box; /* Include padding and border in width */
         }
 
         .contact-form h2 {
@@ -38,24 +99,24 @@
         .contact-form input[type="text"],
         .contact-form input[type="email"],
         .contact-form textarea {
-            width: calc(100% - 22px); /* Adjust for padding and border */
+            width: calc(100% - 22px);
             padding: 10px;
             margin-bottom: 20px;
-            border: 1px solid #7289da; /* Discord Accent Color */
+            border: 1px solid #7289da;
             border-radius: 4px;
-            background-color: #36393f; /* Discord Input Background */
-            color: #dcddde; /* Discord Input Text Color */
-            box-sizing: border-box; /* Include padding and border in element's total width and height */
+            background-color: #36393f;
+            color: #dcddde;
+            box-sizing: border-box;
         }
 
         .contact-form textarea {
-            resize: vertical; /* Allow vertical resizing */
+            resize: vertical;
         }
 
         .contact-form button {
             width: 100%;
             padding: 12px;
-            background-color: #7289da; /* Discord Accent Color */
+            background-color: #7289da;
             color: white;
             border: none;
             border-radius: 4px;
@@ -64,20 +125,34 @@
         }
 
         .contact-form button:hover {
-            background-color: #677bc4; /* Darker shade on hover */
+            background-color: #677bc4;
         }
     </style>
 </head>
 <body>
-    <div class="contact-form">
-        <h2>Contact Us</h2>
-        <p>Have any questions or need support? Reach out to us below!</p>
-        <form id="contactForm">
-            <input type="text" id="discordUsername" name="discordUsername" placeholder="Your Discord Username" required>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+    <header>Breaching</header>
+    <nav>
+        <a href="index.html">Breaching</a>
+        <a href="our-people.html">Our People</a>
+        <a href="contact.html">Contact</a>
+        <a href="hall-of-autism.html">Hall Of Autism</a>
+        <a href="discord.html">Join Our Discord</a>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <div class="section">
+                <div class="contact-form">
+                    <h2>Contact Us</h2>
+                    <p>Have any questions or need support? Reach out to us below!</p>
+                    <form id="contactForm">
+                        <input type="text" id="discordUsername" name="discordUsername" placeholder="Your Discord Username" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -104,7 +179,7 @@
             .then(response => {
                 if (response.ok) {
                     alert('Message sent successfully!');
-                    document.getElementById('contactForm').reset(); // Clear the form
+                    document.getElementById('contactForm').reset();
                 } else {
                     alert('Failed to send message. Please try again.');
                 }
