@@ -18,7 +18,13 @@
         }
 
         header {
-            background: rgba(0, 0, 0, 0.8);
+            background: repeating-linear-gradient(
+                90deg, 
+                #222, 
+                #222 5px, 
+                #333 5px, 
+                #333 10px
+            ); /* Striped background */
             padding: 20px;
             font-size: 28px;
             font-weight: bold;
@@ -29,9 +35,9 @@
         }
 
         .profile-placeholder {
-            width: 60px; /* Adjust as needed */
-            height: 60px; /* Adjust as needed */
-            background-color: #555; /* Placeholder color */
+            width: 60px;
+            height: 60px;
+            background-color: #555;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -88,7 +94,7 @@
         <span>Breaching</span>
     </header>
     <nav>
-        <a href="index.html">Fedding</a>
+        <a href="index.html">Breaching</a>
         <a href="our-people.html">Our People</a>
         <a href="contact.html">Contact</a>
         <a href="hall-of-autism.html">Hall Of Autism</a>
