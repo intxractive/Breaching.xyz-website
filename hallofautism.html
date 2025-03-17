@@ -51,7 +51,7 @@
 
         .navbar a {
             text-decoration: none;
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 250, 255, 0.9);
             margin: 0 15px;
             padding: 8px 16px;
             border-radius: 8px;
@@ -77,10 +77,40 @@
         }
 
         .content {
-            margin-top: 20px;
-            padding: 20px;
-            max-width: 800px;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .person {
+            width: 400px;
             text-align: left;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .person img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .person h4 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .person p {
+            font-size: 18px;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -94,9 +124,11 @@
         <a href="https://discord.gg/xCdyEGVRcj" class="discord-btn" target="_blank">Join Our Discord</a>
     </div>
     <div class="content">
-        <h1>Hall of Autism</h1>
-        <p>This is placeholder content for the Hall of Autism page. You can add your actual content here.</p>
-        <p>For example, you might want to include information about individuals who have made significant contributions to the community.</p>
+        <div class="person">
+            <img src="mysty.png" alt="Mysty">
+            <h4>Mysty</h4>
+            <p>Mysty is a gorilla tag skid, pooron, and whore. Known for their unique skidding contributions to the community, Mysty has definitely left a disgusting mark on the Gorilla Tag and Breaching.xyz community.</p>
+        </div>
     </div>
 </body>
 </html>
